@@ -57,13 +57,13 @@ export default {
       ]
     },
     {
-      name: 'youtubeEmbedBlock',
-      title: 'Youtube Embed',
+      name: 'youTubeEmbedBlock',
+      title: 'YouTube Embed',
       type: 'object',
       fields: [
         {
-          name: 'youtubeEmbed',
-          title: 'Youtube Embed (2g811Eo7K8U)',
+          name: 'youTubeEmbed',
+          title: 'YouTube Embed (2g811Eo7K8U)',
           type: 'string',
           validation: Rule => Rule.required()
         }
@@ -76,7 +76,7 @@ export default {
       fields: [
         {
           name: 'facebookVideoEmbed',
-          title: 'Facebook Video Embed (10153231379946729)',
+          title: 'Facebook Video Embed (https://www.facebook.com/Bloc2BlocEnt/videos/453723538461181/)',
           type: 'string',
           validation: Rule => Rule.required()
         }
