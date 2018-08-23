@@ -4,20 +4,20 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Article Title',
-      type: 'string',
-      validation: Rule => Rule.required().max(60)
-    },
-    {
       name: 'slug',
-      title: 'Article URL',
+      title: 'URL',
       type: 'slug',
       options: {
         source: 'title',
         maxLength: 96
       },
       validation: Rule => Rule.required()
+    },
+    {
+      name: 'title',
+      title: 'Article Title',
+      type: 'string',
+      validation: Rule => Rule.required().max(60)
     },
     {
       name: 'author',
@@ -89,6 +89,12 @@ export default {
         {
           name: 'soundcloud',
           title: 'SoundCloud',
+          type: 'string',
+          fieldset: 'social'
+        },
+        {
+          name: 'website',
+          title: 'Website',
           type: 'string',
           fieldset: 'social'
         }

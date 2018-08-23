@@ -4,20 +4,20 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: Rule => Rule.required().max(60)
-    },
-    {
       name: 'slug',
-      title: 'Category URL',
+      title: 'URL',
       type: 'slug',
       options: {
         source: 'title',
         maxLength: 96
       },
       validation: Rule => Rule.required()
+    },
+    {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      validation: Rule => Rule.required().max(60)
     },
     {
       name: 'description',
