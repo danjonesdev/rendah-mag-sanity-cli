@@ -63,31 +63,35 @@ export default {
     },
     {
       type: 'object',
-      name: 'Socials',
+      name: 'socialHandles',
+      title: 'Social Media Handles',
       fieldsets: [
-        {name: 'social', title: 'Social media handles (Do not include @ symbol)'}
+        {
+          name: 'social',
+          description: 'Do not include "@" symbol',
+        }
       ],
       fields: [
         {
-          name: 'twitterHandle',
+          name: 'twitter',
           title: 'Twitter Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
-          name: 'instagramHandle',
+          name: 'instagram',
           title: 'Instagram Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
-          name: 'facebookHandle',
+          name: 'facebook',
           title: 'Facebook Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
-          name: 'soundcloudHandle',
+          name: 'soundcloud',
           title: 'SoundCloud Handle',
           type: 'string',
           fieldset: 'social'
