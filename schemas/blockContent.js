@@ -31,6 +31,59 @@ export default {
     //   to: {type: 'category'}
     // },
     {
+      name: 'subtitleBlock',
+      title: 'Subtitle',
+      type: 'object',
+      fields: [
+        {
+          name: 'subtitle',
+          title: 'Subtitle',
+          type: 'string',
+          validation: Rule => Rule.required()
+        }
+      ]
+    },
+    {
+      name: 'quoteBlock',
+      title: 'Quote',
+      type: 'object',
+      fields: [
+        {
+          name: 'quote',
+          title: 'Quote',
+          type: 'text',
+          description: 'A quote by the subject that stands out',
+          validation: Rule => Rule.required()
+        },
+        {
+          name: 'source',
+          title: 'Source',
+          type: 'string',
+          description: 'The source or subject',
+          validation: Rule => Rule.required()
+        }
+      ]
+    },
+    {
+      name: 'linkBlock',
+      title: 'Link',
+      type: 'object',
+      fields: [
+        {
+          name: 'text',
+          title: 'Text',
+          type: 'string',
+          validation: Rule => Rule.required()
+        },
+        {
+          name: 'url',
+          title: 'URL',
+          type: 'string',
+          validation: Rule => Rule.required()
+        }
+      ]
+    },
+    {
       name: 'spotifyEmbedBlock',
       title: 'Spotify Embed',
       type: 'object',
@@ -38,6 +91,7 @@ export default {
         {
           name: 'spotifyEmbed',
           title: 'Spotify Embed URI',
+          description: 'For example: spotify:track:5GZ4znceWfpTLrBBpr83DW',
           type: 'string',
           validation: Rule => Rule.required()
         }
@@ -50,8 +104,9 @@ export default {
       fields: [
         {
           name: 'soundCloudEmbed',
-          title: 'SoundCloud Embed (tracks/12345)',
+          title: 'SoundCloud Embed',
           type: 'string',
+          description: 'For example: tracks/12345',
           validation: Rule => Rule.required()
         }
       ]
@@ -63,8 +118,9 @@ export default {
       fields: [
         {
           name: 'youTubeEmbed',
-          title: 'YouTube Embed (2g811Eo7K8U)',
+          title: 'YouTube Embed',
           type: 'string',
+          description: 'For example: 2g811Eo7K8U',
           validation: Rule => Rule.required()
         }
       ]
@@ -76,8 +132,9 @@ export default {
       fields: [
         {
           name: 'facebookVideoEmbed',
-          title: 'Facebook Video Embed (https://www.facebook.com/Bloc2BlocEnt/videos/453723538461181/)',
+          title: 'Facebook Video Embed',
           type: 'string',
+          description: 'For example: https://www.facebook.com/Bloc2BlocEnt/videos/453723538461181/',
           validation: Rule => Rule.required()
         }
       ]

@@ -4,6 +4,12 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'title',
+      title: 'Article Title',
+      type: 'string',
+      validation: Rule => Rule.required().max(60)
+    },
+    {
       name: 'slug',
       title: 'URL',
       type: 'slug',
@@ -12,12 +18,6 @@ export default {
         maxLength: 96
       },
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'title',
-      title: 'Article Title',
-      type: 'string',
-      validation: Rule => Rule.required().max(60)
     },
     {
       name: 'author',
@@ -30,7 +30,7 @@ export default {
       name: 'description',
       title: 'Article Description',
       type: 'text',
-      validation: Rule => Rule.required().min(50).max(300)
+      validation: Rule => Rule.required().max(300)
     },
     {
       name: 'mainImage',
@@ -65,36 +65,30 @@ export default {
       type: 'object',
       name: 'Socials',
       fieldsets: [
-        {name: 'social', title: 'Social media handles'}
+        {name: 'social', title: 'Social media handles (Do not include @ symbol)'}
       ],
       fields: [
         {
-          name: 'twitter',
-          title: 'Twitter',
+          name: 'twitterHandle',
+          title: 'Twitter Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
-          name: 'instagram',
-          title: 'Instagram',
+          name: 'instagramHandle',
+          title: 'Instagram Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
-          name: 'facebook',
-          title: 'Facebook',
+          name: 'facebookHandle',
+          title: 'Facebook Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
-          name: 'soundcloud',
-          title: 'SoundCloud',
-          type: 'string',
-          fieldset: 'social'
-        },
-        {
-          name: 'website',
-          title: 'Website',
+          name: 'soundcloudHandle',
+          title: 'SoundCloud Handle',
           type: 'string',
           fieldset: 'social'
         }

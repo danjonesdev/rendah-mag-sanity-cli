@@ -37,7 +37,7 @@ export default {
       name: 'description',
       title: 'Author Description',
       type: 'text',
-      validation: Rule => Rule.required().min(50).max(300)
+      validation: Rule => Rule.required().max(300)
     },
     {
       type: 'object',
