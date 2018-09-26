@@ -4,6 +4,12 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'name',
+      title: 'Name',
+      type: 'string',
+      validation: Rule => Rule.required().max(60)
+    },
+    {
       name: 'slug',
       title: 'URL',
       type: 'slug',
@@ -12,12 +18,6 @@ export default {
         maxLength: 96
       },
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'name',
-      title: 'Name',
-      type: 'string',
-      validation: Rule => Rule.required().max(60)
     },
     {
       name: 'alias',
@@ -41,38 +41,36 @@ export default {
     },
     {
       type: 'object',
-      name: 'Socials',
+      name: 'socialHandles',
+      title: 'Social Media Handles',
       fieldsets: [
-        {name: 'social', title: 'Social media handles'}
+        {
+          name: 'social',
+          description: 'Do not include "@" symbol',
+        }
       ],
       fields: [
         {
           name: 'twitter',
-          title: 'Twitter',
+          title: 'Twitter Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
           name: 'instagram',
-          title: 'Instagram',
+          title: 'Instagram Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
           name: 'facebook',
-          title: 'Facebook',
+          title: 'Facebook Handle',
           type: 'string',
           fieldset: 'social'
         },
         {
           name: 'soundcloud',
-          title: 'SoundCloud',
-          type: 'string',
-          fieldset: 'social'
-        },
-        {
-          name: 'website',
-          title: 'Website',
+          title: 'SoundCloud Handle',
           type: 'string',
           fieldset: 'social'
         }

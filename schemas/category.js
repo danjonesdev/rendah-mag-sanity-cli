@@ -4,6 +4,12 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      validation: Rule => Rule.required().max(60)
+    },
+    {
       name: 'slug',
       title: 'URL',
       type: 'slug',
@@ -12,12 +18,6 @@ export default {
         maxLength: 96
       },
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: Rule => Rule.required().max(60)
     },
     {
       name: 'description',

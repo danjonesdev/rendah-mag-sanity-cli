@@ -33,8 +33,8 @@ export default {
       validation: Rule => Rule.required().max(300)
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       validation: Rule => Rule.required()
     },
@@ -104,7 +104,7 @@ export default {
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage'
+      media: 'image'
     },
     prepare(selection) {
       const {author} = selection
