@@ -27,6 +27,18 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: {type: 'category'}
+    },
+    {
+      name: 'publishedAt',
+      title: 'Publish Date',
+      type: 'datetime',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'description',
       title: 'Article Description',
       type: 'text',
@@ -44,18 +56,6 @@ export default {
     //   type: 'array',
     //   of: [{type: 'reference', to: {type: 'category'}}]
     // },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: {type: 'category'}
-    },
-    {
-      name: 'publishedAt',
-      title: 'Publish Date',
-      type: 'datetime',
-      validation: Rule => Rule.required()
-    },
     {
       name: 'body',
       title: 'Article Body',
