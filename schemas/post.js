@@ -30,19 +30,14 @@ export default {
       name: 'category',
       title: 'Category',
       type: 'reference',
-      to: {type: 'category'}
+      to: {type: 'category'},
+      validation: Rule => Rule.required()
     },
     {
       name: 'publishedAt',
       title: 'Publish Date',
       type: 'datetime',
       validation: Rule => Rule.required()
-    },
-    {
-      name: 'description',
-      title: 'Article Description',
-      type: 'text',
-      validation: Rule => Rule.required().max(300)
     },
     {
       name: 'image',
@@ -56,6 +51,12 @@ export default {
     //   type: 'array',
     //   of: [{type: 'reference', to: {type: 'category'}}]
     // },
+    {
+      name: 'description',
+      title: 'Article Description',
+      type: 'text',
+      validation: Rule => Rule.required().max(300)
+    },
     {
       name: 'body',
       title: 'Article Body',
