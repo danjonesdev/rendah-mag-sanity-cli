@@ -27,6 +27,11 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: 'featured',
+      title: 'Featured Article',
+      type: 'boolean'
+    },
+    {
       name: 'category',
       title: 'Category',
       type: 'reference',
