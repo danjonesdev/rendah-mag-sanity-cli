@@ -25,6 +25,18 @@ export default {
       type: 'string'
     },
     {
+      name: 'role',
+      title: 'Role',
+      type: 'string'
+    },
+    {
+      name: 'order',
+      title: 'Order',
+      description: 'Between 1-3',
+      type: 'number',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',
